@@ -33,4 +33,40 @@ void loop()
 }
 
 Table 2:
-(Table 1.png)
+int butA = 13;
+int butB = 11;
+int out1 = 6;
+int out2 = 5;
+  
+void setup()
+{
+  pinMode(butA, INPUT);
+  pinMode(butB, INPUT);
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
+}
+
+void loop()
+{
+  if(digitalRead (butA) == LOW && digitalRead (butB) == LOW) {
+    digitalWrite (out1, HIGH);
+    digitalWrite (out2, LOW);
+  }
+   if(digitalRead (butA) == HIGH && digitalRead (butB) == HIGH) {
+    digitalWrite (out1, HIGH);
+    digitalWrite (out2, HIGH);
+  }
+   if(digitalRead (butA) == LOW && digitalRead (butB) == HIGH) {
+    digitalWrite (out1, LOW);
+    digitalWrite (out2, HIGH);
+  }
+   if(digitalRead (butA) == HIGH && digitalRead (butB) == LOW) {
+    digitalWrite (out1, LOW);
+    digitalWrite (out2, HIGH);
+  }
+}
+EXPLANATION:
+I have used the same circut for both of them because it's similar tasks. I started but setting variables as 2 outputs and 2 inputs.
+2 of the inputs are button and in order to match the table I used if commands. There are certain conditions in certain situations which
+are either true or false. I matched all of the conditions.
+
