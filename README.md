@@ -71,12 +71,17 @@ Firtly we make a logic table based on the number of outputs.
 Secondly we use logic gates that we learned in class to turn it into an equation.
 Lastly, we use the equation to light up the outputs in a wanted arrangement.
 
-#### The process looks like this:
+#### What you need:
+
+Logical Gates:
+![](logicalgates.png)
+
+Lights:
+![](Lightsasd.png)
 
 
-
-
-`int butA = 11;
+``` .c
+int butA = 11;
 int butB = 10;
 int butC = 9;
 int outa = 7;
@@ -121,6 +126,7 @@ void loop()
   digitalWrite(outf, eqF);
   bool eqG = (B&&!C)||(!A&&B)||(A&&!C)||(A&&!B);
   digitalWrite(outg, eqG);
+``` 
     `
 
 
