@@ -74,11 +74,12 @@ Lastly, we use the equation to light up the outputs in a wanted arrangement.
 #### What you need:
 
 Logical Gates:
-![](logicalgates.png)
+![](logicgates.png)
+From this, you can costruct a truth table and create an equation
 
 Lights:
 ![](Lightsasd.png)
-
+To display your code.
 
 ``` .c
 int butA = 11;
