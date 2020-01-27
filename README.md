@@ -335,7 +335,7 @@ The image of the Arduino:
 The system works with the same two buttons; button b switchs between the string ( in this case the morse alphabet) and button a confirms the srting you are on. For instance, if you want to write cab, you will have to pick morse alphabet c by pressing button b 2 times, then press button a; press button b once and then a; and only a. If you want to delete/reset/send, press button b until you reach those strings and as seen from the code, pressing button a will confirm and do it.
 
 For less complication, here is a GIF showing how the Morse to English system works:
-![](morseworking.gif)
+![](morseworking.GIF)
 As seen, the system works perfectly.
 
 
