@@ -341,9 +341,8 @@ For less complication, here is a GIF showing how the Morse to English system wor
 As seen, the system works perfectly.
 
 
-### Reset button:
-The reset button 
-
+## Errors/Mistakes
+Even though the programs does the task without a errors something that we can improve is the system we made are open for mistakes. The two button system limits on the inputting part of the program, making it complicated for some users. The work/result is much more lower than a system that allows an actual keyboard. In order to reduce the concenquences of the faulty usability, we have put some
 
 
 ## Evaluation
