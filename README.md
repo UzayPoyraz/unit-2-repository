@@ -388,6 +388,7 @@ https://www.youtube.com/watch?v=nQMU-dAM5Pw&list=PLS6syomu_xC6TR8MhTaBuTHIIJVKAy
 ## Evaluation
 (The image of the system requirments marked with the ones we have completed successfully)
 ![](systemreq.png)
-As seen from the table, we have met all of the system requirements successfully.
+As seen from the table, we have met all of the system requirements successfully. Although there can be some improvements made, ultimately, the program fulfills the success criteria. The communication between two of the planets were possible which was our most important goal. The usability can be improved but for now, everything is completed and there are no errors in the functioning.
+
 
 
