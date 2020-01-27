@@ -136,6 +136,203 @@ We have 2 buttons, I want to define 1 button as "next letter" and other button a
 *Update: Instead of defining as next letter and accept letter, I will display every input for some time and define buttons as "Delete" and "Accept"* The program will display the english alphabet, space and numbers 0-9.
 
 
+### Input system: Morse to English
+After finishing the english input system, the morse input system was relatively easier. In order to complete the morse to english system we decided to replace the english input system strings with the morse alphabet. The structure of the code is very similar to the English input system. In addition, a major difference between two systems is what we used to define letters/code. In english to morse system we used cases, whilst in morse to english, we used if, else and else if commands.
+
+The script below is our morse to english system:
+```.c
+// This program converts Morse code to English using an LCD display. 
+
+// include the library code:
+#include <LiquidCrystal.h>
+int index = 0; 
+String keyboard[]={"RESET", ".-", "-...","-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "DEL"}; // here, we edited the keyboard to have the words in morse rather than in a traditional English alphabet
+String text = "";
+String chosen = "";
+int numOptions = 29;
+int i = 0;
+
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 9, 8);
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  pinMode(10, OUTPUT);
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  attachInterrupt(0, changeLetter, RISING);//button A in port 2
+  attachInterrupt(1, selected, RISING);//button B in port 3
+}
+
+void loop() {
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting begins with 0):
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(keyboard[index]);
+  lcd.setCursor(0, 1);
+  lcd.print(chosen); // printing the translated/chosen string on the second line of the LCD
+  delay(100);
+}
+
+//This function changes the letter in the keyboard
+void changeLetter(){
+  static unsigned long last_interrupt_time = 0;
+  unsigned long interrupt_time = millis();
+  if (interrupt_time - last_interrupt_time > 200)
+  {
+  
+    last_interrupt_time = interrupt_time;// If interrupts come faster than 200ms, assum
+    index++;
+      //check for the max row number
+    if(index==numOptions){
+      index=0; //loop back to first row
+    } 
+ }
+}
+
+//this function adds the letter to the text or send the msg
+void selected(){
+  static unsigned long last_interrupt_time = 0;
+  unsigned long interrupt_time = millis();
+  if (interrupt_time - last_interrupt_time > 200)
+  {
+  
+    last_interrupt_time = interrupt_time;// If interrupts come faster than 200ms, assum
+    
+    String key = keyboard[index];
+    if (key == "DEL")
+    {
+      int len = text.length();
+      text.remove(len-1);
+    }
+    else if (key == "RESET")
+    {
+      chosen = ""; //resets chosen string to nothing, effectively resetting the system
+    }
+    else{
+      text += key; // immediately converts the letter whenever it is added
+      convert(); // up until here, the system is very similar to the English input system in the method of inputting letters
+    }
+    index = 0; //restart the index
+  }
+}
+
+void convert() { // defining the conversion/translation function 
+  if (text == ".-" ) { // if else statements used because switch cases proved difficult when comparing entire strings
+    String key = "A"; // if text = .-, then the letter is A. adds A to the chosen string, displayed immediately on the second row of the LCD
+    chosen += key;
+  }
+  else if (text == ".-" ) { // repreats for every letter
+    String key = "B"; 
+    chosen += key;
+  }
+  else if (text == "-.-.") {
+    String key = "C"; 
+    chosen += key;
+  }
+  else if (text == "-..") {
+    String key = "D"; 
+    chosen += key;
+  }
+  else if (text == ".") {
+    String key = "E"; 
+    chosen += key;
+  }
+  else if (text == "..-.") {
+    String key = "F"; 
+    chosen += key;
+  }
+  else if (text == "--.") {
+    String key = "G";
+    chosen += key;    
+  }
+  else if (text == "....") {
+    String key = "H"; 
+    chosen += key;
+  }
+  else if (text == "..") {
+    String key = "I"; 
+    chosen += key;
+  }
+  else if (text == ".---") {
+    String key = "J"; 
+    chosen += key;
+  }
+  else if (text == "-.-") {
+    String key = "K"; 
+    chosen += key;
+  }
+  else if (text == ".-..") {
+    String key = "L"; 
+    chosen += key;
+  }
+  else if (text == "--") {
+    String key = "M"; 
+    chosen += key;
+  }
+  else if (text == "-.") {
+    String key = "N"; 
+    chosen += key;
+  }
+  else if (text == "---") {
+    String key = "O"; 
+    chosen += key;
+  }
+  else if (text == ".-" ) {
+    String key = "P"; 
+    chosen += key;
+  }
+  else if (text == "-.-.") {
+    String key = "Q"; 
+    chosen += key;
+  }
+  else if (text == "-..") {
+    String key = "R"; 
+    chosen += key;
+  }
+  else if (text == ".") {
+    String key = "S"; 
+    chosen += key;
+  }
+  else if (text == "..-.") {
+    String key = "T"; 
+    chosen += key;
+  }
+  else if (text == "--.") {
+    String key = "U"; 
+    chosen += key;
+  }
+  else if (text == "...-") {
+    String key = "V"; 
+    chosen += key;
+  }
+  else if (text == ".--") {
+    String key = "W"; 
+    chosen += key;
+  }
+  else if (text == "-..-") {
+    String key = "X"; 
+    chosen += key;
+  }
+  else if (text == "-.--") {
+    String key = "Y";
+    chosen += key;
+  }
+  else if (text == "--..") {
+    String key = "Z";
+    chosen += key; 
+  }
+  text = ""; // resets text at the end of each translation in order to prevent repetition of letters
+}
+````
+Moreover, the arduino set-up we used is the completely same with the English input system.
+The image of the Arduino:
+
+
+
 
 ## Evaluation
 
