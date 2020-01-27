@@ -342,8 +342,37 @@ As seen, the system works perfectly.
 
 
 ## Errors/Mistakes
-Even though the programs does the task without a errors something that we can improve is the system we made are open for mistakes. The two button system limits on the inputting part of the program, making it complicated for some users. The work/result is much more lower than a system that allows an actual keyboard. In order to reduce the concenquences of the faulty usability, we have put some
+Even though the programs does the task without a errors something that we can improve is the system we made are open for mistakes. The two button system limits on the inputting part of the program, making it complicated for some users. The work/result is much more lower than a system that allows an actual keyboard. In order to reduce the concenquences of the faulty usability, we put a reset button and a delete button. This buttons helps us a lot when it comes to mistakes. Moreover, we used different deleting options in the two different systems
 
+For the English to Morse system, we used Delete:
+''''
+ 
+    String key = keyboard[index];
+    if (key == "DEL")
+    {
+      int len = text.length();
+      text.remove(len-1); '''' 
+
+We started by adding the string "DEL" (for delete) to the keyboard. After we added it, we used an if command to put it in action. If the DEL button is pressed, it will remove 1 letter from the text.length() (which is the text that appears on the LCD). We decided this would be enough because everything is written letter by letter.
+
+For the Morse to English system;
+`
+else if (key == "RESET")
+    {
+      chosen = ""; //resets chosen string to nothing, effectively resetting the system
+    }
+    else{
+      text += key; // immediately converts the letter whenever it is added
+      convert(); // up until here, the system is very similar to the English input system in the method of inputting letters
+    }
+    index = 0; //restart the index `
+
+We decided to take a difference approach. While writing morse, you don't write letter by letter, rather you write couple of symbols together. We thought it would be inefficient to delete each symbol one by one because that would take an excessive amount of time to delete all of it. Thus, we put a reset button instead. First we added the rest button to the string. After defining it we made it an else if command and, if the RESET button is pressed, it clears up the whole inputs that were added to the LCD.
+
+The reset button in action:
+![](reserworking.GIF)
+
+As seen, the reset button clears everthing, making it easier to delete.
 
 ## Evaluation
 
