@@ -340,7 +340,9 @@ For less complication, here is a GIF showing how the Morse to English system wor
 
 As seen, the system works perfectly.
 
-## Reset button
+
+### Reset button:
+The reset button 
 
 
 
