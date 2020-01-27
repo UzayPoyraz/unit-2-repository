@@ -370,11 +370,24 @@ else if (key == "RESET")
 We decided to take a difference approach. While writing morse, you don't write letter by letter, rather you write couple of symbols together. We thought it would be inefficient to delete each symbol one by one because that would take an excessive amount of time to delete all of it. Thus, we put a reset button instead. First we added the rest button to the string. After defining it we made it an else if command and, if the RESET button is pressed, it clears up the whole inputs that were added to the LCD.
 
 The reset button in action:
-![](reserworking.GIF)
+![](resetworking.GIF)
 
 As seen, the reset button clears everthing, making it easier to delete.
+## Testing
+All of the works mentioned in this README file and more of the tests are uploaded to youtube.
+### English to Morse:
+In this test we wrote "TEST" to the keyboard system and pressed send. This video evidence shows that the system is working perfectly fine and when it is connected to a light source, the source plays the input in Morse alphabet.
+The link to the video:
+https://www.youtube.com/watch?v=HkToqDY9gbA&list=PLS6syomu_xC6TR8MhTaBuTHIIJVKAyJ-w&index=2&t=0s
+
+### Morse to English:
+In this video evidence we used the morse code "-.-..--..." .The translation of this morse code is "CAB" and we got correct result. Afterwards we pressed DEL to delete a letter which worked (CA). Finally, we pressed the reset button which cleared all the inputs
+The link the video:
+https://www.youtube.com/watch?v=nQMU-dAM5Pw&list=PLS6syomu_xC6TR8MhTaBuTHIIJVKAyJ-w&index=3&t=0s
 
 ## Evaluation
-
+(The image of the system requirments marked with the ones we have completed successfully)
+![](systemreq.png)
+As seen from the table, we have met all of the system requirements successfully.
 
 
