@@ -752,5 +752,9 @@ https://www.youtube.com/watch?v=nQMU-dAM5Pw&list=PLS6syomu_xC6TR8MhTaBuTHIIJVKAy
 ![](systemreq.png)
 As seen from the table, we have met all of the system requirements successfully. Although there can be some improvements made, ultimately, the program fulfills the success criteria. The communication between two of the planets were possible which was our most important goal. The usability can be improved but for now, everything is completed and there are no errors in the functioning.
 
+## Citation
+Rouse, Margaret. “What Is Morse Code? - Definition from WhatIs.com.” SearchNetworking, TechTarget, 21 Sept. 2005, searchnetworking.techtarget.com/definition/Morse-code.
+
+Rouse, Margaret. “What Is Morse Code? - Definition from WhatIs.com.” SearchNetworking, TechTarget, 21 Sept. 2005, searchnetworking.techtarget.com/definition/Morse-code.
 
 
