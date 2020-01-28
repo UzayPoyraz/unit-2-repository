@@ -755,6 +755,14 @@ As seen from the table, we have met all of the system requirements successfully.
 ## Citation
 Rouse, Margaret. “What Is Morse Code? - Definition from WhatIs.com.” SearchNetworking, TechTarget, 21 Sept. 2005, searchnetworking.techtarget.com/definition/Morse-code.
 
-Rouse, Margaret. “What Is Morse Code? - Definition from WhatIs.com.” SearchNetworking, TechTarget, 21 Sept. 2005, searchnetworking.techtarget.com/definition/Morse-code.
+The Editors of Encyclopaedia Britannica. “Protocol.” Encyclopædia Britannica, Encyclopædia Britannica, Inc., 31 Aug. 2018, www.britannica.com/technology/protocol-computer-science.
 
+
+Person, and wikiHow. “How to Convert from Binary to Decimal.” WikiHow, WikiHow, 12 Nov. 2019, www.wikihow.com/Convert-from-Binary-to-Decimal.
+
+“Demystify Using Arrays with Arduino by Watching This Indpeth Video Tutorial.” Programming Electronics Academy, 31 Oct. 2018, www.programmingelectronics.com/tutorial-13-how-to-use-arrays-with-arduino/.
+
+“Usability.” Usability - Computer Science Wiki, computersciencewiki.org/index.php/Usability.
+
+“Switch...case.” Arduino Reference, www.arduino.cc/reference/en/language/structure/control-structure/switchcase/.
 
