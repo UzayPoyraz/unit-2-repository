@@ -134,7 +134,23 @@ void loop()
 ### Input system: English
 We have 2 buttons, I want to define 1 button as "next letter" and other button as "accept letter".
 *Update: Instead of defining as next letter and accept letter, I will display every input for some time and define buttons as "Delete" and "Accept"* The program will display the english alphabet, space and numbers 0-9.
+*We decided to scratch that idea too, the final decicion can be seen below.
 
+### What we decided on doing the system
+Since we have some limitations for the program we had to come up with a solution that is
+*1) Successfully completes the criteria*
+*2) Usable by all users who are able to press a button*
+*3) Make it realistic so we have an idea on how to do it*
+*4) Have some add-ons like "Delete, Reset, Send"*
+By the end of our discussion, we decided that the best way of programing this would be by having two buttons, LCD and 2 Output (Light sources)
+So our plan was to make a string and put all the alphabet to the string. In addition, the string will consist actions like "DELETE, RESET and SEND) There are two buttons: One button is used to cycle through the srting and the other one is to confirm the input LCD is on. Moreover, once you press "SEND" The input shown in the display will light up as morse code, which can be examined through the LED's.
+### Manual:
+Button A: This button is used to confirm the string LCD is on
+Button B: Cycles through the string (Can be seen through the LCD)
+LCD: Displays the strings and shows the actions
+LED Lights: Displays English input in Morse code through lighting up
+
+### Protocols
 
 ### Input system: Morse to English
 After finishing the english input system, the morse input system was relatively easier. In order to complete the morse to english system we decided to replace the english input system strings with the morse alphabet. The structure of the code is very similar to the English input system. In addition, a major difference between two systems is what we used to define letters/code. In english to morse system we used cases, whilst in morse to english, we used if, else and else if commands.
